@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.slide-container{
+     position:relative;
+     }
+
+    .slide img{
+    	weight:100%;
+    	height:600px;
+    }
+    .effect slide{
+    	animation-name: effect;
+    	animation-duration:1s;
+    }
+    //*@keyframes effect{
+    	from{
+    		opacity:0.6;
+    	}
+
+    	to{
+    		opacity:0.6;
+    	}
+    }
+
+
+	</style>
+</head>
+<body>
+	<div class="slide-container">
+		<div class="effect slide">
+			<img src="1.jpeg"/>
+		</div>
+
+
+		<div class="effect slide">
+			<img src="1.jpeg"/>
+		</div>
+
+		<div class=effect slide>
+			<img src="1.jpeg"/>
+		</div>
+	</div>
+    <script>
+	var index=0;
+	show();
+	function show(){
+		var i;
+		var slides=document.getelementsByclassName("slide");
+		for(i=0;i<slides.lenght;i++)
+		{
+			slides[i].style.display=" none";
+		}
+	     index=index+1;
+	    if(Index>slides.length){
+		index=1;
+	}
+     
+
+     slides[index-1].style.display="block";
+       setTimeout(show,1500);
+        }
+
+</script>
+</body>
+</html>
